@@ -1,0 +1,68 @@
+/* Mul.css */
+
+.mul-container {
+    text-align: center;
+    padding: 50px;
+    background-color: #f2f2f2;
+    color: #222;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.mul-container.dark {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+    width: 200px;
+    transition: 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.mul-container.dark input {
+    background-color: #1e1e1e;
+    border: 1px solid #555;
+    color: white;
+}
+
+.mul-container.dark button {
+    background-color: #444;
+    color: white;
+}
+
+.toggle-btn {
+    margin-top: 30px;
+    background-color: #28a745;
+}
+
+.output {
+    margin-top: 30px;
+}

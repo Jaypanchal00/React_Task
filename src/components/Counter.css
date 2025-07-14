@@ -1,0 +1,59 @@
+/* Counter.css */
+
+.container {
+    text-align: center;
+    padding: 50px;
+    transition: all 0.3s ease;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container.dark {
+    background-color: #1e1e1e;
+    color: #f9f9f9;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 48px;
+    margin: 20px 0;
+}
+
+.button-group {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.container button {
+    background-color: #007bff;
+    color: white;
+}
+
+.container.dark button {
+    background-color: #444;
+    color: white;
+}
+
+.toggle-btn {   
+    margin-top: 30px;
+    background-color: #28a745;
+}
