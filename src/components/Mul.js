@@ -18,7 +18,7 @@ function Mul() {
         setItems([...items, Number(inputValue)]);
         setInputValue("");
     };
-
+    
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
     };
