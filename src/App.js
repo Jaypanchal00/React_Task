@@ -21,12 +21,12 @@ function App() {
       <hr /> */}
       {/* <Useeffect/>
       <Fetch/> */}
-      <UserManagement/>
+      {/* <UserManagement/> */}
       {/* <Userb/> */}
       {/* <Todo1/> */}
       {/* <InputFocusExample/> */}
       {/* <Form/> */}
-      {/* <Timer/> */}
+      <Timer/>
     
     </div>
   );

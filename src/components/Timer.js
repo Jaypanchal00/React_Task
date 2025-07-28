@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-export default function Speed() {
+export default function Timer() {
     const [text, setText] = useState('');
     const [wpm, setwpm] = useState(0)
     const [second, setsecond] = useState(0)
@@ -34,8 +34,6 @@ useEffect(() => {
     }
 })
 const char = text.replace(/\s/g, '').length;
-
-
 
 return (
     <div>
