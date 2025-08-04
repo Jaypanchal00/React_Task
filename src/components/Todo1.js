@@ -1,40 +1,62 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useState } from 'react'
 
-function Todo1() {
-  const inputRef = useRef();
-  const ulRef = useRef(); 
+export default function Todo() {
+  let sorted = JSON.parse(localStorage.getItem("user"))||[];
+  const [task,setTask]=useState('');
+  const [todo,setTodo]=useState(sorted);
+  const [edit,setEdit]=useState(null);
 
-  const handleAddTask = () => {
-    const task = inputRef.current.value.trim();
-    if (task === '') {
-        alert("Please Fill ")
-        return;
+  useEffect(()=>{
+    localStorage.setItem("user",JSON.stringify(todo));
+  },[todo])
+
+  function handleChange(e){
+    
+     setTask(e.target.value);
   }
-    const li = document.createElement('li'); 
-      li.textContent = task;
-      ulRef.current.appendChild(li); 
-      inputRef.current.value = ''; 
-    }
+   
+  function AddTask(){
+    setTodo([...todo,task]); 
+    setTask('');
+
+   if(edit !== null){
+    const updated=[...todo];
+    updated[edit]=task;
+    setTodo(updated);
+    setEdit(null);
+
+   }
+  }
+
+  function DeleteTask(index){
+  const DeleteList=[...todo];
+  DeleteList.splice(index,1);
+  setTodo(DeleteList)
+  }
+
+  function EditTask(index){
+   setTask(todo[index]);
+   setEdit(index);
+  }
+  
   return (
     <div>
-      <h1>Todo</h1>
+     <h1>Todo</h1>
+      <input type="text" onChange={handleChange} value={task} />
+      <button onClick={AddTask}>Add Task</button>
 
-      <input
-        type="text"
-        placeholder="Enter a task"
-        ref={inputRef}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter') handleAddTask();
-        }}
-      />
-
-      <button type="button" onClick={handleAddTask}>
-        Add Task
-      </button>
-
-      <ul ref={ulRef} style={{ marginTop: '20px' }}></ul>
-    </div>
-  );
+      <ul>
+        {
+            todo.map((item,index)=>(
+               <li key={index} >{item}
+                
+                <button onClick={()=> EditTask(index)}>Edit</button>
+                <button onClick={()=> DeleteTask(index)} >Delete</button>
+               
+               </li>
+            ))
+        }
+      </ul>
+    </div>
+  )
 }
-
-export default Todo1;
