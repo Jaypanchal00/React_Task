@@ -5,46 +5,46 @@ export default function Home() {
     <div>
 
       {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
         <div className="container">
-          <a className="navbar-brand" href="#top">MyWebsite</a>
+          <a className="navbar-brand fw-bold text-primary" href="#top">TechNova</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <a className="nav-link active" href="#top">Home</a>
+                <a className="nav-link" href="#top">Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#about">About</a>
+                <a className="nav-link" href="#about">Who We Are</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#features">Features</a>
+                <a className="nav-link" href="#features">What We Do</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#contact">Contact</a>
+                <a className="nav-link" href="#contact">Reach Out</a>
               </li>
             </ul>
-          </div> 
+          </div>
         </div>
       </nav>
 
       {/* Hero Section */}
-      <section id="top" className="bg-primary text-white text-center py-5" style={{ paddingTop: "100px" }}>
-        <div className="container">
-          <h1 className="display-4">Welcome to My Website</h1>
-          <p className="lead">A modern responsive homepage built with React and Bootstrap</p>
-          <button className="btn btn-light btn-lg mt-3">Get Started</button>
+      <section id="top" className="text-white text-center d-flex align-items-center justify-content-center" style={{ height: "100vh", background: "linear-gradient(to right, #667eea, #764ba2)" }}>
+        <div>
+          <h1 className="display-3 fw-bold">Innovate. Build. Inspire.</h1>
+          <p className="lead mt-3">We craft intelligent solutions for tomorrow’s world.</p>
+          <button className="btn btn-outline-light btn-lg mt-4">Explore Our Vision</button>
         </div>
       </section>
 
       {/* About Section */}
       <section id="about" className="py-5 bg-light text-center">
         <div className="container">
-          <h2>About Us</h2>
-          <p className="mt-3">
-            We are passionate developers building sleek and fast web applications.
+          <h2 className="fw-bold">Who We Are</h2>
+          <p className="mt-3 text-muted">
+            TechNova is a passionate team of engineers and creators dedicated to pushing the boundaries of technology. From startups to enterprises, we deliver impactful solutions with purpose and clarity.
           </p>
         </div>
       </section>
@@ -52,22 +52,34 @@ export default function Home() {
       {/* Features Section */}
       <section id="features" className="py-5">
         <div className="container">
-          <h2 className="text-center mb-4">Features</h2>
-          <div className="row">
-            <div className="col-md-4 text-center">
-              <i className="bi bi-speedometer2 display-4 text-primary"></i>
-              <h4 className="mt-3">Fast</h4>
-              <p>Our apps are optimized for performance and speed.</p>
+          <h2 className="text-center fw-bold mb-5">What We Do</h2>
+          <div className="row g-4">
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm text-center p-4">
+                <div className="card-body">
+                  <i className="fas fa-brain fa-3x text-success mb-3"></i>
+                  <h5 className="card-title">AI Solutions</h5>
+                  <p className="card-text">Empowering businesses with smart automation and decision-making tools.</p>
+                </div>
+              </div>
             </div>
-            <div className="col-md-4 text-center">
-              <i className="bi bi-phone display-4 text-primary"></i>
-              <h4 className="mt-3">Responsive</h4>
-              <p>Looks great on any device, big or small.</p>
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm text-center p-4">
+                <div className="card-body">
+                  <i className="fas fa-code fa-3x text-success mb-3"></i>
+                  <h5 className="card-title">Custom Development</h5>
+                  <p className="card-text">From web apps to APIs, we design and build scalable systems tailored for your goals.</p>
+                </div>
+              </div>
             </div>
-            <div className="col-md-4 text-center">
-              <i className="bi bi-shield-lock display-4 text-primary"></i>
-              <h4 className="mt-3">Secure</h4>
-              <p>We prioritize security in every project.</p>
+            <div className="col-md-4">
+              <div className="card h-100 border-0 shadow-sm text-center p-4">
+                <div className="card-body">
+                  <i className="fas fa-users fa-3x text-success mb-3"></i>
+                  <h5 className="card-title">Team Extension</h5>
+                  <p className="card-text">Need developers fast? We extend your engineering team with top talent.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,25 +88,25 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-5 bg-light">
         <div className="container">
-          <h2 className="text-center mb-4">Contact Us</h2>
-          <form className="mx-auto" style={{ maxWidth: "600px" }}>
+          <h2 className="text-center fw-bold mb-4">Reach Out</h2>
+          <form className="mx-auto bg-white p-4 shadow rounded" style={{ maxWidth: "600px" }}>
             <div className="mb-3">
-              <input type="text" className="form-control" placeholder="Your Name" />
+              <input type="text" className="form-control" placeholder="Your Full Name" />
             </div>
             <div className="mb-3">
-              <input type="email" className="form-control" placeholder="Your Email" />
+              <input type="email" className="form-control" placeholder="Work Email Address" />
             </div>
             <div className="mb-3">
-              <textarea className="form-control" rows="4" placeholder="Your Message"></textarea>
+              <textarea className="form-control" rows="4" placeholder="How can we help you?"></textarea>
             </div>
-            <button type="submit" className="btn btn-primary w-100">Send Message</button>
+            <button type="submit" className="btn btn-success w-100">Let's Connect</button>
           </form>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-dark text-white text-center py-3">
-        <p>&copy; {new Date().getFullYear()} My Website. All rights reserved.</p>
+      <footer className="bg-dark text-white text-center py-3 mt-5">
+        <p className="mb-0">&copy; {new Date().getFullYear()} TechNova. Innovating with Purpose.</p>
       </footer>
 
       {/* Smooth scroll CSS */}
@@ -104,6 +116,7 @@ export default function Home() {
         }
       `}</style>
 
+     
     </div>
   );
 }

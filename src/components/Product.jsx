@@ -6,7 +6,7 @@ export default function Product() {
       <h1>Product</h1>
 
       <Link to="elec">Elec</Link>
-      <Outlet />
+      <Outlet />  
     </div>
   );
 }

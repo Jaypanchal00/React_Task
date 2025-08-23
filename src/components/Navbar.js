@@ -11,7 +11,6 @@ export default function Navbar() {
             <Link to="/Todo1">Todo1</Link>
             <br/>
             <Link to="/Product">Product</Link>
-            {/* <Link to></Link> */}
 
         </div>
     );
