@@ -10,7 +10,7 @@ export default function Api() {
   const [product, setProduct] = useState([]);
   const [edit, seteditId] = useState(false);
   const [search, setsearch] = useState("");
-  const [sortOrder, setSortOrder] = useState(""); // ✅ sorting ke liye
+  const [sortOrder, setSortOrder] = useState(""); 
 
   useEffect(() => {
     fetchApi();
